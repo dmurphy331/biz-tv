@@ -1,14 +1,23 @@
 import React from "react";
-import "./App.css";
+import { css } from "@emotion/core";
+import BottomBanner from "./components/BottomBanner/BottomBanner";
+import SideBanner from "./components/SideBanner/SideBanner";
+import MainBanner from "./components/MainBanner/MainBanner";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>BizTV</p>
-      </header>
+    <div css={global}>
+      <div>
+        <MainBanner />
+        <SideBanner />
+      </div>
+      <div>
+        <BottomBanner />
+      </div>
     </div>
   );
-}
+};
+
+const global = css``;
 
 export default App;
